@@ -4,7 +4,7 @@ using namespace std;
 
 
 //TC O(sqrt(n)*log(n)) as sqrt() take extra log(n) in every iteration
-bool check_prime(int n)
+bool check_prime(int n)//51
 {
     if(n<=1)
     return false;

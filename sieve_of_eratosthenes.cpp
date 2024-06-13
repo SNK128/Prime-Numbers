@@ -32,12 +32,19 @@ void createSieve()
 
 int main()
 {
-   int n;
+     createSieve();
+
+     int q;
+     cin>>q;
+   while(q--)
+   {
+    int n;
    cin>>n;
-   createSieve();
+  
    if(prime[n]==true)
    cout<<"Prime number";
    else
    cout<<"Not Prime Number";
+   }
     return 0;
 }
