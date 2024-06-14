@@ -1,3 +1,5 @@
+//user will give an input 'N'.You need to print for how many numbers till 10^6 that 'n' is smallest prime factor
+
 #include<bits/stdc++.h>
 using namespace std;
 

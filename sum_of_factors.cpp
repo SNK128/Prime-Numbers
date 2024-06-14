@@ -1,31 +1,34 @@
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
-int N=1000000;
-vector<int> prime(N+1,1);
-
-void createSieve(){
-    prime[0]=prime[1]=false;
-
-    for(int i=2;i*i<=N;i++)
+long long factorSum(int n)
     {
-        if(prime[i]==1)
+        // Your code goes here  
+        if(n==1)
+        return 1;
+        
+        long long ans=0;   //1+30+2+15+3+10+5+6
+        for(int i=1;i*i<=n;i++)
         {
-            for(int j=i*i;j<=N;j+=i)
-        {
-            if(prime[j]!=0);
-            prime[i]++;
+            if(n%i==0){
+                ans+=i;
             
-             prime[j]=0;
+            if(n/i!=i)
+            ans+=(n/i);
+            }
+            
+            
         }
-        }
+        return ans;
         
     }
-}
 
 int main()
 { 
-    createSieve();
+    
 
     int q;
     cin>>q;
@@ -33,8 +36,8 @@ int main()
     {
         int n;
         cin>>n;
-
-        cout<<prime[n]<<endl;
+        cout<<factorSum(n)<<endl;
+       
     }
     
     return 0;
